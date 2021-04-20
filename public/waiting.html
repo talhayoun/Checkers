@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/waiting.css">
+</head>
+<body>
+    <div id="headContainer">
+        <div id="head">
+            <a href="http://localhost:3000" class="header">Home</a>
+            <a class="header">Rules</a>
+            <a class="header">How To Play</a>
+        </div>
+    </div>
+    <div id="bodyContainer">
+        <div id="waiting">
+            <h1>Room Number</h1>
+            <div>
+                <h1 id="wait">Waiting for opponent!</h1>
+                <div class="loader"></div>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div class="board" id="gameBoard"></div>
+        <div id="chat">
+            <h1>Online Chat</h1>
+                <div id="gamechat">
+
+                </div>
+                <input type="text" id="message" placeholder="Enter your message: ">
+                <button type="button" id="sendMessage">Send</button>
+        </div>
+    </div>
+    <div class="none" id="blackturn">Black's Turn</div>
+    <div class="none"  id="whiteturn">White's Turn</div>
+    <br><br>
+    <div id="winner"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/waiting.js"></script>
+</body>
+</html>

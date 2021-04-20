@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css//index.css">
+</head>
+<body>
+    <div id="headContainer">
+        <div id="head">
+            <a href="http://localhost:3000" class="header">Home</a>
+            <a class="header">Rules</a>
+            <a class="header">How To Play</a>
+            <a href="/rank" class="header">Rank</a>
+        </div>
+        <div id="logOut">
+            <p id="logoutUsername"></p>
+            <a id="loggingout" href="/">Log Out</a>
+        </div>
+    </div>
+    <div id="bodyContainer">
+        <div id="friends">
+            <div id="friendsListDiv">
+                <h1>Users Online</h1>
+                <div id="friendsList">
+                    
+                </div>
+            </div>
+        </div>
+        <div id="gameOptions">
+            <div id="joinrequest"></div>
+            <button id="selfGame">Home Game</button>
+        </div>
+        <div id="roomsList">
+            <div id="roomsContainer">
+                <table id="table">
+                    <tr>
+                      <th>Room</th>
+                      <th>Join Game</th>  
+                      <th><button id="newGame">Create new Game</button></th>
+                    </tr>
+
+                  </table>
+            </div>
+        </div>
+        <div id="chatContainer">
+            <div id="loginform">
+                    <button class="log" id="user"> Sign In / Sign Up</button>
+                    <button class="log" id="guest"> Login As A Guest</button>
+                    <div id="google">
+                        <img src="./css/google-logo.jpg" >
+                        <button id="googleButton">Sign in with google</button> 
+                    </div>                  
+            </div>
+            <div id="login">
+                <form id="signin">
+                    <h1>Login Details</h1>
+                    <button id="loginback"><</button>
+                    <input type="text" id="loginusername" placeholder="Username" required>
+                    <input type="password" id="loginpassword" placeholder="Password" required>
+                    <p id="invalidError">Invalid password / username, try again</p>
+                    <button type="submit">Log In!</button>
+                    <button id="signup">Sign up!</button>
+                </form>
+            </div>
+            <div id="sign">
+                <form id="registerForm">
+                    <h1>Register Details</h1>
+                    <button id="registerback"><</button>
+                    <input type="text" id="signupname" placeholder="Username" required>
+                    <p id="usernameLengthError">Username must be more than 4 characters</p>
+                    <input type="email" id="signupemail" placeholder="Email" required>
+                    <input type="password" id="signuppass" placeholder="Password" required>
+                    <p id="passwordLengthError">Password must be more than 6 characters / letters</p>
+                    <button type="submit">Sign Up!</button>
+                    <button id="registerLogin">Log In!</button>
+                </form>
+            </div>
+            <div id="chat">
+                <h1>Online Chat</h1>
+                <div id="gamechat">
+
+                </div>
+                <input type="text" id="message" placeholder="Enter your message: ">
+                <button type="button" id="sendMessage">Send</button>
+            </div>
+        </div>
+    </div>
+    <div id="footerContainer">
+
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

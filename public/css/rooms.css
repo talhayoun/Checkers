@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    overflow: hidden;
+}
+
+/* --------------------- Header Elements---------------- */
+
+#headContainer{
+    width:100vw;
+    height:15vh;
+    background-color: rgb(51, 45, 45);
+    font-family: cursive;
+}
+#head{
+    margin-top:50px;
+}
+
+.header{
+    margin-left: 150px;
+    font-size: 25px;
+    color: #dadada
+}
+.header:hover{
+    color: cornflowerblue;
+}
+
+/* -------------------- Body Elements ------------------ */
+
+#roomsContainer{
+    height: 90vh;
+    background: #bdbdad;
+    margin: 0px 150px;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 5px;
+    text-align: left;
+    font-size: 20px;
+    font-family: -webkit-pictograph;    
+}
+table{
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 40vw;
+}  
+th{
+    text-align: center;
+}
+#newGame{
+    border-radius: 10px;
+    font-family: cursive;
+    font-size: 20px;
+    background: antiquewhite;
+}

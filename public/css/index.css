@@ -1,0 +1,552 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    overflow: hidden;
+}
+p{
+    margin-bottom: 16px;
+}
+/* --------------------- Header Elements---------------- */
+
+#headContainer{
+    width:100vw;
+    height:15vh;
+    background-color: rgb(51, 45, 45);
+    font-family: cursive;
+}
+#head{
+    margin-top:50px;
+}
+
+.header{
+    margin-left: 150px;
+    font-size: 25px;
+    color: #dadada
+}
+.header:hover{
+    color: cornflowerblue;
+}
+
+#logOut{
+    display: none;
+    float: right;
+    margin-right: 150px;
+    color: #f5ff62;
+}
+#logOut a{
+    display: inline-block;
+    text-decoration: none;
+}
+#logOut a:visited{
+    color: #f5ff62;
+}
+#logOut a:hover{
+    color: aqua;
+}
+#logOut p{
+    margin-bottom: 0px;
+    color: #ffff;
+}
+/* -------------------- Body Elements ------------------ */
+
+#bodyContainer{
+    width: 100vw;
+    height:70vh;
+    background-color: #001f3f;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#gameOptions{
+    margin: 0 auto;
+    margin-top: 50px;
+    height:30vh;
+    width:50vw;
+    /* background-image: url("./checkers-247-thumb.png"); */
+    background-image: url("./checkerslogo.png");
+    background-repeat: no-repeat;
+    position: relative;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#selfGame{
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    outline: none;
+    right: 0;
+    margin-right: 80px;
+    margin-bottom: 30px;
+}
+
+/* ------ Google Login ---- */
+#google{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin-left: 60px;
+}
+#google img{
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 60px;
+}
+#google button{
+    margin-left: 108px;
+    margin-top: 100px;
+    height: 31px;
+    width: 150px;
+    border: none;
+}
+/* ------ Friends Div----- */
+#friends{
+    height: 60vh;
+    margin-top: 50px;
+    margin-right: 40px;
+    margin-left: 40px;
+    background: #383828;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+#friendsListDiv{
+    height: 50vh;
+    background: #ececd2;
+    margin: 50px;
+    text-align: center;
+    border-radius: 50px;
+}
+#friendsListDiv h1{
+    border-bottom: 2px dotted black;
+}
+#friendsList{
+    height: 40vh;
+    margin: 10px;
+    overflow: auto;
+}
+.friendsP{
+    float: left;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: fantasy;
+}
+.friendsButton{
+    margin-right: 100px;
+    background: #95ceff;
+    font-size: 18px;
+    font-family: cursive;
+}
+#joinrequest{
+    z-index: 1;
+    height: 100px;
+    width: 300px;
+    background: #000000;
+    margin: 0 auto;
+    opacity: 0.9;
+    color: white;
+    text-align: center;
+    display: none;
+}
+#joinrequest p{
+    margin-top: 20px;
+}
+#joinrequest button{
+    margin-right: 20px;
+}
+/* Chat Div Styles */
+#chatContainer{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+#chat{
+    display: none;
+}
+#chat, #login, #sign{
+    width: 23vw;
+    border: 3px solid black;
+    background: #bdbaba;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 60vh;
+    position: relative;
+}
+#chat h1{
+    text-align: center;
+    border-bottom: 2px dotted black;
+    font-family: fantasy;
+}
+#chat input{
+    position: absolute;
+    bottom: 0;
+    width: 18vw;
+    height: 5vh;
+    font-size: 20px;
+}
+#chat button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 5vh;
+    width: 5vw;
+    font-size: 20px;
+}
+#gamechat{
+    height: 49vh;
+    overflow-wrap: break-word;
+    font-family: system-ui;
+    overflow:auto
+}
+
+
+/* Login Buttons */
+
+#loginform{
+    position: absolute;
+    width: 23vw;
+    height: 60vh;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: #d0d0d0
+}
+.log{
+    height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    background: darkcyan;
+    font-family: cursive;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: block;
+}
+.guestLogin{
+    margin-top: 80px;
+    font-size: 20px;
+    margin-left: 80px;
+}
+
+/* Sign In Form */
+#login{
+    display: none;
+}
+#signin{
+    height: 60vh;
+    text-align: center;
+}
+#signin input{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: block;
+}
+#signin button{
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: lightblue;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+#signin h1{
+    display: inline;
+}
+#loginback, #registerback{
+    display: inline-block;
+    float: left;
+    border: none;
+}
+#invalidError{
+    display: none;
+    color: red;
+    font-family: cursive;
+    margin-top: 20px;
+}
+
+/* ------- Sign Up -------*/
+#sign{
+    display: none;
+    text-align: center;
+}
+#registerForm{
+    height: 60vh;
+}
+#registerForm button{
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: lightblue;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+#registerForm input{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: block;
+}
+#registerForm h1{
+    display: inline;
+}
+#usernameLengthError, #passwordLengthError{
+    color: red;
+    font: caption;
+    margin-top: 10px;
+    display: none;
+    font-family: cursive;
+}
+
+/* Rooms List */
+#roomsList{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 30vh;
+}
+
+#roomsContainer{
+    height: 30vh;
+    background: #bdbdad;
+    overflow: auto;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 5px;
+    text-align: left;
+    font-size: 20px;
+    font-family: -webkit-pictograph;    
+}
+table{
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 40vw;
+}  
+th{
+    text-align: center;
+}
+#newGame{
+    border-radius: 10px;
+    font-family: cursive;
+    font-size: 20px;
+    background: antiquewhite;
+}
+
+/* -------------------- Footer Elements ----------------- */
+
+#footerContainer{
+    width:100vw;
+    height:150px;
+    background-color: cornflowerblue;
+}
+
+@media screen and (max-width:1430px ){
+    #gameOptions{
+        background-image: url("./1430px\ checkerslogo.png");
+    }
+    #friendsListDiv{
+        margin: 20px;
+    }
+    .friendsButton{
+        height: 27px;
+        font-size: 18px;
+        margin-right: 30px;
+    }
+}
+@media screen and (max-width:1145px ){
+    #gameOptions{
+        background-image: url("./1190px\ checkers\ logo.png");
+    }
+    #friends{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .header{
+        margin-left: 120px;
+    }
+    #logOut{
+        margin-right: 20px;
+    }
+    #head{
+        margin-top: 20px;
+    }
+    .friendsButton{
+        height: 25px;
+        font-size: 16px;
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width:800px ){
+    #bodyContainer{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    #bodyContainer{
+        overflow: auto;
+    }
+    #friends{
+        height: 50vh;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        margin-top: 0px;
+        background: none;
+    }
+    #friendsListDiv{
+        height: 45vh;
+        width: 36vw;
+        margin-left: 50px;
+        border-radius: 0px;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    #friendsListDiv h1{
+        font-size: 28px;
+        margin-right: 20px;
+    }
+    #gameOptions{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        height: 40vh;
+        background-image: url("./800px\ checkers.png");
+        width: 97vw;
+        margin: 0 auto;
+    }
+    #roomsList{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    #chatContainer{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        height: 50vh;
+        width: 50vw;
+        margin: 15px;
+    }
+    #loginform{
+        width:50vw;
+        position:unset;
+        margin-top: unset;
+        margin-left: unset;
+        height: 45vh;
+    }
+    #login, #sign, #chat{
+        width: unset;
+        height: 45vh;
+        margin-top: unset;
+    }
+    .log{
+        margin-top: 30px;
+    }
+    #google{
+        height: 10vh;
+        margin-top: 50px;
+        margin-left: 30px;
+    }
+    #google img, #google button{
+        margin-top: 0px;
+    }
+    #guestUserName{
+        margin-top: 0px;
+        margin-left: 30px;
+    }  
+    #chat input{
+        width: 33vw;
+        font-size: 16px;
+    }
+    #chat button{
+        width: 12vw;
+        font-size: 16px;
+    }
+    .friendsButton{
+        height: 25px;
+        font-size: 16px;
+        margin-right: 0px;
+    }
+    .header{
+        margin-left: 70px;
+    }
+    #logOut{
+        margin-right: 20px;
+    }
+    #head{
+        margin-top: 20px;
+    }
+    table{
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width:420px ){
+    #gameOptions{
+        background-image: url("./iphonex\ checkers.png");
+    }
+    #roomsList, #roomsContainer{
+        height: 50vh;
+    }
+    #friendsListDiv{
+        margin: 10px;
+        margin-left: unset;
+    }
+    .friendsP{
+        font-size: 18px;
+    }
+    #chatContainer{
+        margin: 10px;
+        width: 55vw;
+    }
+    #friends{
+        margin-left: 10px;
+    }
+    #login, #sign, #chat{
+        width: 55vw;
+        margin-right: unset;
+        margin-left: unset;
+    }
+    #chat input{
+        width: 40vw;
+        font-size: 15px;
+    }
+    #chat button{
+        width: 14vw;
+    }
+    #head{
+        margin-top: 10px;
+    }
+    .header{
+        margin-left: 20px;
+        font-size: 20px;
+    }
+    #logOut{
+        margin-top: 20px;
+        font-size: 15px;
+    }
+}

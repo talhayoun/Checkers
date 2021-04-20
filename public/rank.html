@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/rank.css">
+</head>
+<body>
+    <div id="headContainer">
+        <div id="head">
+            <a href="http://localhost:3000" class="header">Home</a>
+            <a class="header">Rules</a>
+            <a class="header">How To Play</a>
+        </div>
+    </div>
+    <div id="bodyContainer">
+        <div id="roomsContainer">
+            <table id="table">
+                <tr>
+                  <th>Rank</th>
+                  <th>Name</th>  
+                  <th>Score</th>
+                </tr>
+              </table>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/rank.js"></script>
+</body>
+</html>
